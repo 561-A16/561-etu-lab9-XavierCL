@@ -1,4 +1,5 @@
 # Lab5
+- Travail individuel
 - Compte pour 2 points
 - Remettre avant la fin du cours du 18 octobre
 
