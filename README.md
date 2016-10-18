@@ -1,7 +1,7 @@
 # Lab5
 - Travail individuel
 - Compte pour 2 points
-- Remettre avant la fin du cours du 18 octobre
+- Remettre avant le début du cours du 21 octobre
 
 ## Installation
 - Installer Docker https://docs.docker.com/engine/installation/
