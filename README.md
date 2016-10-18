@@ -12,10 +12,10 @@
 - L'application web doit démarrer automatiquement à l'exécution d'un conteneur associé à l'image **webapp**
 - L'application doit être accessible dans le navigateur
 
-## Information pratique
+## Informations pratiques
 - L'image *ymazieres/dotnet:compile* contient tous les outils nécessaires pour compiler un projet web .net core
 - Voir les instructions en ligne de commande du client Dotnet
-- Voir comment exposer le port d'un conteneur afin
+- Voir comment exposer le port d'un conteneur afin que l'application soit accessible dans le navigateur
 
 
 
