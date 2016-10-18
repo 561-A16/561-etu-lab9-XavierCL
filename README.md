@@ -1,6 +1,6 @@
 # Lab5
 - Compte pour 2 points
-- Remettre avant le début du cours du 21 octobre
+- Remettre avant la fin du cours du 18 octobre
 
 ## Installation
 - Installer Docker https://docs.docker.com/engine/installation/
