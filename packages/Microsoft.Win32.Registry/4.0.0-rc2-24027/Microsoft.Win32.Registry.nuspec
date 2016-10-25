@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata minClientVersion="3.4">
+    <id>Microsoft.Win32.Registry</id>
+    <version>4.0.0-rc2-24027</version>
+    <title>Microsoft.Win32.Registry</title>
+    <authors>Microsoft</authors>
+    <owners>microsoft,dotnetframework</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</licenseUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <description>Provides support for accessing and modifying the Windows Registry.
+
+Commonly Used Types:
+Microsoft.Win32.RegistryKey
+Microsoft.Win32.Registry
+Microsoft.Win32.RegistryValueKind
+Microsoft.Win32.RegistryHive
+Microsoft.Win32.RegistryView
+ \r\n TFS ID: 1599443, GitHub SHA: https://github.com/dotnet/corefx/tree/eede273a4dfabcea608621f5e1bbf8ad00584cfb</description>
+    <copyright>© Microsoft Corporation.  All rights reserved.</copyright>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+      <group targetFramework=".NETCore5.0" />
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="System.Collections" version="4.0.11-rc2-24027" exclude="Compile" />
+        <dependency id="System.Globalization" version="4.0.11-rc2-24027" exclude="Compile" />
+        <dependency id="System.Resources.ResourceManager" version="4.0.1-rc2-24027" exclude="Compile" />
+        <dependency id="System.Runtime" version="4.1.0-rc2-24027" />
+        <dependency id="System.Runtime.Extensions" version="4.1.0-rc2-24027" exclude="Compile" />
+        <dependency id="System.Runtime.Handles" version="4.0.1-rc2-24027" />
+        <dependency id="System.Runtime.InteropServices" version="4.1.0-rc2-24027" exclude="Compile" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="mscorlib" targetFramework=".NETFramework4.6" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNetCore.Server.IISIntegration.Tools</id>
+    <version>1.0.0-preview2-final</version>
+    <authors>Microsoft.AspNetCore.Server.IISIntegration.Tools</authors>
+    <owners>Microsoft.AspNetCore.Server.IISIntegration.Tools</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <description>IIS Integration publish tool for .NET Core CLI. Contains the dotnet-publish-iis command for publishing web applications to be hosted using IIS.</description>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <tags>aspnetcore,iis</tags>
+    <serviceable>true</serviceable>
+    <dependencies>
+      <group targetFramework=".NETCoreApp1.0">
+        <dependency id="Microsoft.NETCore.App" version="1.0.0" />
+        <dependency id="Microsoft.Extensions.CommandLineUtils" version="1.0.0" />
+        <dependency id="Microsoft.DotNet.ProjectModel" version="1.0.0-rc3-003121" />
+        <dependency id="System.Diagnostics.Process" version="4.1.0" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

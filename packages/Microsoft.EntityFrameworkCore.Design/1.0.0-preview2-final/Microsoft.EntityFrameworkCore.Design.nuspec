@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.EntityFrameworkCore.Design</id>
+    <version>1.0.0-preview2-final</version>
+    <authors>Microsoft.EntityFrameworkCore.Design</authors>
+    <owners>Microsoft.EntityFrameworkCore.Design</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <developmentDependency>true</developmentDependency>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <description>Design-time components for Entity Framework Core tools</description>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <tags>Entity Framework Core,entity-framework-core,EF,Data,O/RM</tags>
+    <serviceable>true</serviceable>
+    <dependencies>
+      <group targetFramework=".NETCore5.0">
+        <dependency id="Microsoft.EntityFrameworkCore.Design.Core" version="1.0.0-preview2-final" />
+      </group>
+      <group targetFramework=".NETCoreApp1.0">
+        <dependency id="Microsoft.NETCore.App" version="1.0.0" />
+        <dependency id="Microsoft.Extensions.CommandLineUtils" version="1.0.0" />
+        <dependency id="Microsoft.EntityFrameworkCore.Design.Core" version="1.0.0-preview2-final" />
+      </group>
+      <group targetFramework=".NETFramework4.5.1">
+        <dependency id="Microsoft.Extensions.CommandLineUtils" version="1.0.0" />
+        <dependency id="Microsoft.EntityFrameworkCore.Design.Core" version="1.0.0-preview2-final" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

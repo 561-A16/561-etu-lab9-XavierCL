@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.VisualStudio.Web.CodeGenerators.Mvc</id>
+    <version>1.0.0-preview2-update1</version>
+    <authors>Microsoft.VisualStudio.Web.CodeGenerators.Mvc</authors>
+    <owners>Microsoft.VisualStudio.Web.CodeGenerators.Mvc</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Code Generators for ASP.NET Core MVC. Contains code generators for MVC Controllers and Views.</description>
+    <tags>aspnetcore,aspnetcoremvc,codegenerator,scaffolding,visualstudioweb</tags>
+    <serviceable>true</serviceable>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.1">
+        <dependency id="Microsoft.VisualStudio.Web.CodeGeneration" version="[1.0.0-preview2-update1, )" />
+      </group>
+      <group targetFramework=".NETStandard1.6">
+        <dependency id="Microsoft.VisualStudio.Web.CodeGeneration" version="[1.0.0-preview2-update1, )" />
+      </group>
+    </dependencies>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <projectUrl>http://www.asp.net/</projectUrl>
+  </metadata>
+</package>
