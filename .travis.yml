@@ -3,13 +3,11 @@ sudo: required
 language: csharp
 cache:
   directories:
-  - packages
+  - $HOME/packages
 
 services:
   - docker
 
-before_install:
-- docker build -t webapp:test .
-
 script:
-  - docker run -it -v $PWD/packages:/root/.nuget/packages -p 5000:5000 webapp:test
+  - docker build -t webapp:test .
+  - docker run -it -v $HOME/packages:/root/.nuget/packages webapp:test

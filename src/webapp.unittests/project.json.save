@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "dependencies": {
+    "System.Runtime.Serialization.Primitives": "4.1.1",
+    "xunit": "2.1.0",
+    "dotnet-test-xunit": "1.0.0-rc2-192208-24",
+    "using Microsoft.AspNetCore.Mvc;
+using WebApplication.Controllers;
+using Xunit;
+
+namespace Tests
+{
+    public class Tests
+    {
+        [Fact]
+        public void Test1() 
+        {
+            var controllerUnderTest = new HomeController();
+            var result = controllerUnderTest.Index();
+            Assert.IsType<ViewResult>(result);
+        }
+    }
+}
+  },
+  "testRunner": "xunit",
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.1"
+        }
+      },
+      "imports": [
+        "dotnet5.4",
+        "portable-net451+win8"
+      ]
+    }
+  }
+}
