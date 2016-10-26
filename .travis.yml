@@ -9,5 +9,5 @@ services:
   - docker
 
 script:
-  - docker build -t webapp:test .
+  - docker build -t webapp:test -f dockerfiles/test .
   - docker run -it -v $PWD/packages:/root/.nuget/packages webapp:test

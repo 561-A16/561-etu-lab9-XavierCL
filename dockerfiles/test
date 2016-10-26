@@ -1,0 +1,14 @@
+FROM ymazieres/dotnet:compile
+
+COPY /scripts/testAndPublish.sh /src/init.sh
+RUN chmod +x /src/init.sh
+
+EXPOSE 5000
+VOLUME $HOME/packages
+ENTRYPOINT ["sh", "./init.sh"]
+
+ENV ASPNETCORE_URLS http://+:5000
+
+COPY src /src
+
+WORKDIR /src
