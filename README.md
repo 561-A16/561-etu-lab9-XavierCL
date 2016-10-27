@@ -12,4 +12,5 @@
   - L'exécution des tests
   - La création de l'image **webapp:release**
   - Le téléchargement de l'image **webapp:release** sur Docker Hub
+    - Créer des variables d'environnement sur travis pour votre id et mot de passe de docker hub
   - Le déploiement sur *digital ocean*
