@@ -8,6 +8,6 @@ ENTRYPOINT ["sh", "./init.sh"]
 
 ENV ASPNETCORE_URLS http://+:5000
 
-COPY $HOME/publish/ /src/
+COPY src/webapp/ /src/
 
 WORKDIR /src
