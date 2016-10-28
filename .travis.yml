@@ -9,6 +9,7 @@ services:
   - docker
 
 script:
+  - echo $PWD
   - docker build -t webapp:test -f dockerfiles/test .
   - docker run -it -v $PWD/packages:/root/.nuget/packages webapp:test
 
@@ -16,5 +17,5 @@ after_success:
   - cd $HOME
   - docker build -t webapp:release -f dockeriles/release .
   - docker tag webapp:release xaviercl/webapp:latest
-  - docker login -u=$DOCKER_HUB_USERNAME -p=$DOCKER_HUB_PASSWORD
+  - docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD"
   - docker push xaviercl/webapp:latest
