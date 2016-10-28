@@ -14,3 +14,8 @@
   - Le téléchargement de l'image **webapp:release** sur Docker Hub
     - Créer des variables d'environnement sur travis pour votre id et mot de passe de docker hub
   - Le déploiement sur *digital ocean*
+
+## Serveur de test
+ - IP: 159.203.33.172
+ - User: u1440721
+ - Pass: utilisateur2016
