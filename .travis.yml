@@ -13,6 +13,7 @@ script:
   - docker run -it -v $PWD/packages:/root/.nuget/packages webapp:test
 
 after_success:
+  - cd $HOME
   - docker build -t webapp:release -f dockeriles/release .
   - docker tag webapp:release xaviercl/webapp:latest
   - docker login -u=$DOCKER_HUB_USERNAME -p=$DOCKER_HUB_PASSWORD
