@@ -9,16 +9,17 @@ services:
   - docker
 
 script:
-  - echo $PWD
-  - ls
   - export TRAVIS_BUILD_DIRECTORY=$PWD
   - docker build -t webapp:test -f dockerfiles/test .
   - docker run -it -v $HOME/packages:/root/.nuget/packages -v $PWD/publish:/root/publish webapp:test
 
 after_success:
   - cd $TRAVIS_BUILD_DIRECTORY
-  - echo $PWD
-  - ls
   - docker build -t xaviercl/webapp:latest -f dockerfiles/release .
   - docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD"
   - docker push xaviercl/webapp:latest
+  - docker save -o $PWD/webapp.tar xaviercl/webapp:latest
+  - $TEST_SERVER_RSA_PRIVATE_KEY >> ~/.ssh/id_rsa
+  - scp $PWD/webapp.tar u1440721@159.203.33.172:$HOME/webapp.tar
+  - ssh u1440721@159.203.33.172 'docker load -i $HOME/webapp.tar'
+  - ssh u1440721@159.203.33.172 'docker run -it -p 8080:5000 xaviercl/webapp:latest'
