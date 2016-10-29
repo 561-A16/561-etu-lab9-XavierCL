@@ -13,7 +13,7 @@ script:
   - ls
   - export TRAVIS_BUILD_DIRECTORY=$PWD
   - docker build -t webapp:test -f dockerfiles/test .
-  - docker run -it -v $HOME/packages:/root/.nuget/packages webapp:test
+  - docker run -it -v $HOME/packages:/root/.nuget/packages -v $PWD/publish:/root/publish webapp:test
 
 after_success:
   - cd $TRAVIS_BUILD_DIRECTORY
