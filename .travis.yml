@@ -9,7 +9,7 @@ services:
   - docker
 
 script:
-  - export TRAVIS_BUILD_DIRECTORY = $PWD
+  - export TRAVIS_BUILD_DIRECTORY=$PWD
   - docker build -t webapp:test -f dockerfiles/test .
   - docker run -it -v $PWD/packages:/root/.nuget/packages webapp:test
 
