@@ -9,7 +9,7 @@ services:
   - docker
 
 script:
-  - $PWD
+  - echo $PWD
   - ls
   - export TRAVIS_BUILD_DIRECTORY=$PWD
   - docker build -t webapp:test -f dockerfiles/test .
@@ -17,7 +17,7 @@ script:
 
 after_success:
   - cd $TRAVIS_BUILD_DIRECTORY
-  - $PWD
+  - echo $PWD
   - ls
   - docker build -t xaviercl/webapp:latest -f dockerfiles/release .
   - docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD"
