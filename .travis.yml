@@ -19,7 +19,7 @@ after_success:
   - docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD"
   - docker push xaviercl/webapp:latest
   - docker save -o $PWD/webapp.tar xaviercl/webapp:latest
-  - ssh-keygen -t rsa -f testServerWebapp
+  - ssh-keygen -t rsa -f testServerWebapp -N ''
   - cat $HOME/.ssh/testServerWebapp.pub
   - cat $HOME/.ssh/testServerWebapp
 #  - $TEST_SERVER_RSA_PRIVATE_KEY >> ~/.ssh/id_rsa
