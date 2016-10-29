@@ -28,7 +28,7 @@ after_success:
   - echo $TEST_SERVER_RSA_PRIVATE_KEY
   - echo $TEST_SERVER_RSA_PUBLIC_KEY
   - eval "$(ssh-agent -s)"
-  - ssh-add id_rsa
+  - ssh-add ~/.ssh/id_rsa
   - scp -o StrictHostKeyChecking=no $PWD/scripts/releaseTestServer.sh u1440721@159.203.33.172:$HOME/init.sh
   - ssh u1440721@159.203.33.172 'chmod +x init.sh'
   - ssh u1440721@159.203.33.172 'sh init.sh'
