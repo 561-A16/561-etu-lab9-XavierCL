@@ -28,5 +28,3 @@ after_success:
   - scp -o StrictHostKeyChecking=no $PWD/scripts/releaseTestServer.sh u1440721@159.203.33.172:$HOME/init.sh
   - ssh u1440721@159.203.33.172 'chmod +x init.sh'
   - ssh u1440721@159.203.33.172 'sh init.sh'
-  - ssh u1440721@159.203.33.172 'docker load -i $HOME/webapp.tar'
-  - ssh u1440721@159.203.33.172 'docker run -it -p 8080:5000 xaviercl/webapp:latest'
