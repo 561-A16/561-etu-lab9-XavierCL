@@ -9,12 +9,16 @@ services:
   - docker
 
 script:
+  - $PWD
+  - ls
   - export TRAVIS_BUILD_DIRECTORY=$PWD
   - docker build -t webapp:test -f dockerfiles/test .
   - docker run -it -v $PWD/packages:/root/.nuget/packages webapp:test
 
 after_success:
   - cd $TRAVIS_BUILD_DIRECTORY
-  - docker build -t xaviercl/webapp:latest -f dockeriles/release .
+  - $PWD
+  - ls
+  - docker build -t xaviercl/webapp:latest -f dockerfiles/release .
   - docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD"
   - docker push xaviercl/webapp:latest
