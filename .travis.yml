@@ -1,6 +1,18 @@
 sudo: required
 
 language: csharp
+
+branches:
+  only:
+  - master
+
+addons:
+  ssh_known_hosts:
+  - 159.203.33.172
+  apt:
+    packages:
+    - sshpass
+
 cache:
   directories:
   - $HOME/packages
