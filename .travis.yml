@@ -19,7 +19,6 @@ cache:
 
 services:
   - docker
-  - sshpass
 
 script:
   - export TRAVIS_BUILD_DIRECTORY=$PWD
