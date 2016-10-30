@@ -42,8 +42,8 @@ after_success:
   - export SSHPASS=$TEST_SERVER_SSH_PASSWORD
   - sshpass -V
   - sshpass -e scp -o StrictHostKeyChecking=no $PWD/scripts/releaseTestServer.sh u1440721@159.203.33.172:/home/u1440721
-  - sshpass -e ssh u1440721@159.203.33.172 'chmod +x init.sh'
-  - sshpass -e ssh u1440721@159.203.33.172 'sh init.sh'
+  - sshpass -e ssh u1440721@159.203.33.172 'chmod +x releaseTestServer.sh'
+  - sshpass -e ssh u1440721@159.203.33.172 'sh releaseTestServer.sh'
 #  - eval "$(ssh-agent -s)"
 #  - ssh-add ~/.ssh/id_rsa
 #  - scp -o StrictHostKeyChecking=no $PWD/scripts/releaseTestServer.sh u1440721@159.203.33.172:$HOME/init.sh
