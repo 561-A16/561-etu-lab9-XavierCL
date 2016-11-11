@@ -4,4 +4,4 @@ docker stop xaviercldotnet
 docker rm xaviercldotnet
 docker rmi xaviercl/webapp:latest
 docker pull xaviercl/webapp:latest
-docker run -itd -name xaviercldotnet -p 8099:5000 --link postgresdb:postgres xaviercl/webapp:latest
+docker run -itd --name xaviercldotnet -p 8099:5000 --link postgresdb:postgres xaviercl/webapp:latest
